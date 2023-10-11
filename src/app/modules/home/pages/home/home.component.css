@@ -1,0 +1,45 @@
+.container-header{
+  position: fixed;
+  width: 85%;
+  height: 80px;
+  transition: all .5s ease-in-out;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -ms-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+}
+
+.show{
+   margin-left: 85px;
+}
+
+.large{
+   margin-left: 255px;
+}
+
+.container-sidebar-large{
+  width: 15%;
+}
+
+.container-sidebar-short{
+  width: 5%;
+}
+
+
+.container-sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+}
+
+.main{
+  border: 1px solid  black;
+  height: calc(100vh - 8%);
+  background-color: aqua;
+}
