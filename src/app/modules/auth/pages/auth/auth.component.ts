@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Login } from 'src/app/core/models/login';
 
 @Component({
   selector: 'app-auth',
@@ -33,9 +32,10 @@ export class AuthComponent implements OnInit{
 
   public sendUser(){
     const {value} = this.formLogin
-    if (value.user==='jdominguez123'&& value.password === '1234567' ) {
-      this.router.navigate(['/home']);
-    }
+    console.log(value)
+     if (value.user==='jdominguez123'&& value.password === '1234567' ) {
+      this.router.navigate(['/home/welcome']);
+     }
 
   }
 }

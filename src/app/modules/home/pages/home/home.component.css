@@ -1,7 +1,5 @@
 .container-header{
   position: fixed;
-  width: 85%;
-  height: 80px;
   transition: all .5s ease-in-out;
   -webkit-transition: all .5s ease-in-out;
   -moz-transition: all .5s ease-in-out;
@@ -10,7 +8,7 @@
 }
 
 .show{
-   margin-left: 85px;
+   margin-left: 85px !important;
 }
 
 .large{
@@ -27,6 +25,7 @@
 
 
 .container-sidebar{
+    overflow: hidden;
     position: fixed;
     top: 0;
     left: 0;
@@ -39,7 +38,14 @@
 }
 
 .main{
-  border: 1px solid  black;
-  height: calc(100vh - 8%);
-  background-color: aqua;
+  height: calc(100vh - 80px);
+  margin-top: 80px;
+  margin-left: 255px;
+  padding: 10px;
+  transition: all .5s ease-in-out;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -ms-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
 }
+

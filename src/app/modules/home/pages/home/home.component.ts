@@ -8,6 +8,7 @@ import { SidebarServiceService } from 'src/app/shared/services/sidebar-service.s
 })
 export class HomeComponent implements OnInit{
   status:boolean = true;
+  nombre:string = 'Josue'
   _sidebarService = inject(SidebarServiceService)
 
 

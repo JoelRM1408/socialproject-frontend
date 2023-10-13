@@ -1,12 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ProyectoComponent } from './pages/proyecto/proyecto.component';
+import { WelcomeAlumnComponent } from './pages/welcome-alumn/welcome-alumn.component';
 
 const routes: Routes = [
   {
     path:'',
-    component: ProyectoComponent,
+    component: WelcomeAlumnComponent,
     outlet:"child"
+  },
+  {
+    path:'**',
+    redirectTo:''
   }
 ];
 
@@ -14,4 +18,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class ProyectoRoutingModule { }
+export class WelcomeRoutingModule { }

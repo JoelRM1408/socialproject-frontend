@@ -1,4 +1,4 @@
-import { Component, Injectable, inject } from '@angular/core';
+import { Component, Injectable, Input, inject } from '@angular/core';
 import { SidebarServiceService } from '../../services/sidebar-service.service';
 
 @Component({
@@ -7,6 +7,7 @@ import { SidebarServiceService } from '../../services/sidebar-service.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+  @Input()  nombre!:string;
   statusSidebar:boolean = true;
   _sidebarService = inject(SidebarServiceService)
 

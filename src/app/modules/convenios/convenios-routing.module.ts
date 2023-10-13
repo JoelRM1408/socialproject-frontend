@@ -5,7 +5,8 @@ import { ConvenioComponent } from './pages/convenio/convenio.component';
 const routes: Routes = [
   {
     path:'',
-    component:ConvenioComponent
+    component:ConvenioComponent,
+    outlet:"child"
   }
 ];
 
