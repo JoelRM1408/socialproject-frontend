@@ -8,11 +8,11 @@
 }
 
 .show{
-   margin-left: 85px !important;
+   margin-left: 75px !important;
 }
 
 .large{
-   margin-left: 255px;
+   margin-left: 225px;
 }
 
 .container-sidebar-large{
@@ -40,7 +40,7 @@
 .main{
   height: calc(100vh - 80px);
   margin-top: 80px;
-  margin-left: 255px;
+  margin-left: 225px;
   padding: 10px;
   transition: all .5s ease-in-out;
   -webkit-transition: all .5s ease-in-out;

@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class AuthComponent implements OnInit{
 
+  
   formLogin: FormGroup = new FormGroup({});
 
   constructor(private router:Router){}
