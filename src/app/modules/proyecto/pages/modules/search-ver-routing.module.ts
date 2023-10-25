@@ -1,11 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ConvenioComponent } from './pages/convenio/convenio.component';
+import { SearchVerComponent } from './home/search-ver/search-ver.component';
 
 const routes: Routes = [
   {
     path:'',
-    component:ConvenioComponent,
+    component:SearchVerComponent,
+  },
+  {
+    path:'**',
+    redirectTo:'',
   }
 ];
 
@@ -13,4 +17,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class ConveniosRoutingModule { }
+export class SearchVerRoutingModule { }

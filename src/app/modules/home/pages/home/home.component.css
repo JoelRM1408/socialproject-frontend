@@ -1,5 +1,5 @@
-.container-header{
-  position: fixed;
+.container-header {
+  width: calc(100vw - 15%);
   transition: all .5s ease-in-out;
   -webkit-transition: all .5s ease-in-out;
   -moz-transition: all .5s ease-in-out;
@@ -7,40 +7,41 @@
   -o-transition: all .5s ease-in-out;
 }
 
-.show{
-   margin-left: 75px !important;
+.show {
+  margin-left: 75px !important;
 }
 
-.large{
-   margin-left: 225px;
+.large {
+  margin-left: 240px;
 }
 
-.container-sidebar-large{
-  width: 15%;
+.container-sidebar-large {
+  width: 240px;
 }
 
-.container-sidebar-short{
-  width: 5%;
+.container-sidebar-short {
+  width: 75px;
 }
 
 
-.container-sidebar{
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    transition: all .5s ease-in-out;
-    -webkit-transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-    -ms-transition: all .5s ease-in-out;
-    -o-transition: all .5s ease-in-out;
+.container-sidebar {
+  z-index: 2;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  transition: all .5s ease-in-out;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -ms-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
 }
 
-.main{
+.main {
   height: calc(100vh - 80px);
   margin-top: 80px;
-  margin-left: 225px;
+  margin-left: 240px;
   padding: 10px;
   transition: all .5s ease-in-out;
   -webkit-transition: all .5s ease-in-out;
@@ -49,3 +50,24 @@
   -o-transition: all .5s ease-in-out;
 }
 
+@media screen and (max-width : 600px) {
+
+
+  .container-sidebar {
+    margin-top: 80px;
+    left: -240px;
+  }
+
+  .show {
+    margin-left: 0px !important;
+  }
+
+  .large {
+    margin-left: 0px;
+  }
+
+  .container-sidebar-short {
+    width: 100%;
+    left: 0px;
+  }
+}

@@ -12,13 +12,16 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
+import { PruebaComponent } from './pages/components/prueba/prueba.component';
+import { StandComponent } from 'src/app/shared/components/stand/stand.component';
 
 
 @NgModule({
   declarations: [
     ProyectoComponent,
     OptionsComponent,
-    FormProyectoComponent
+    FormProyectoComponent,
+    PruebaComponent
   ],
   imports: [
     CommonModule,
@@ -29,7 +32,8 @@ import {MatButtonModule} from '@angular/material/button';
     ReactiveFormsModule,
     MatAutocompleteModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    StandComponent
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })

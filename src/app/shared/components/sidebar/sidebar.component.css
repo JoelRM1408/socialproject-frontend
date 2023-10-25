@@ -115,4 +115,19 @@ a.selected{
         width: 80px;
         left: -80px;
     }
+
+    .options__menu{
+      width: 100%;
+    }
+
+    .name__page{
+      justify-content: center;
+    }
+
+    .option{
+      justify-content: center;
+    }
+
+
+
 }

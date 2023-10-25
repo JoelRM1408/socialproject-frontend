@@ -3,12 +3,23 @@ import { RouterModule, Routes } from '@angular/router';
 import { ProyectoComponent } from './pages/proyecto/proyecto.component';
 
 const routes: Routes = [
-  {
-    path:'',
+ {
+    path: '',
     component: ProyectoComponent,
-    outlet:"child"
+    children:[
+      {
+        path:'agregar',
+        loadChildren: ()=> import('./pages/modules/search-ver.module').then(m => m.SearchVerModule),
+      }
+    ]
+  },
+   {
+    path: '**',
+    redirectTo:'',
   }
 ];
+
+
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
