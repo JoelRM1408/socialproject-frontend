@@ -1,1 +1,49 @@
-<h1>Modulos</h1>
+<div id="home">
+    <div class="contenido_opciones">
+        <div class="margen">
+            <a class="opcion" [routerLink]="['/home/seguridad']">
+                <p class="texto">Seguridad</p>
+            </a>
+        </div>  
+    </div>
+    <div class="contenido_opciones">
+        <div class="margen">
+            <a class="opcion" [routerLink]="['/home/configuracion']">
+                <p class="texto">Configuración de parámetros </p>
+            </a>
+        </div>  
+    </div>
+    <div class="contenido_opciones">
+        <div class="margen">
+            <a class="opcion" [routerLink]="['/home/coordinador']">
+                <p class="texto">Portal del coordinador</p>
+            </a>
+        </div>  
+    </div>
+    <div class="contenido_opciones">
+        <div class="margen">
+            <a class="opcion" [routerLink]="['/home/alumno']">
+                <p class="texto">Portal del estudiante</p>
+            </a>
+        </div>  
+    </div>
+
+    <div class="contenido_opciones">
+        <div class="margen">
+            <a class="opcion" [routerLink]="['/home/reportes']">
+                <p class="texto">Reporte</p>
+            </a>
+        </div>  
+    </div>
+
+    <div class="barra">
+        <img src="/assets/logo_upeu.png" class="upeu_derecha">
+        <!-- <img src="/assets/pictures/persona.png" class="persona"> -->
+        <!-- <p class="nombre_sede"><b>Nombre Completo</b></p> -->
+        <!-- <p class="sede">SEDE</p> -->
+        <!-- <p class="nombre_sede"><b>UPeU - Lima</b></p> -->
+        <div class="cerrar_sesion">
+            <p class="sesion"><a [routerLink]="['/login']" class="sesion">Cerrar Sesión </a> </p>
+        </div>
+    </div>
+</div>

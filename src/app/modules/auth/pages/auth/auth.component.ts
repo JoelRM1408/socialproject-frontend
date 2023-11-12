@@ -34,9 +34,9 @@ export class AuthComponent implements OnInit{
   public sendUser(){
     const {value} = this.formLogin
     console.log(value)
-     if (value.user==='jdominguez123'&& value.password === '1234567' ) {
-      this.router.navigate(['/home/welcome']);
-     }
+    if (value.user===''&& value.password === '' ) {
+      this.router.navigate(['/modules']);
+    }
 
   }
 }
