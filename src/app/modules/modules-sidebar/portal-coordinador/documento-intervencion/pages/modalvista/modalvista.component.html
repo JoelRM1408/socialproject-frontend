@@ -1,0 +1,16 @@
+<h2 mat-dialog-title><strong>{{ docint?.nombre }}</strong></h2>
+<mat-dialog-content >
+  <p><strong class="atributo">ID:</strong><span> {{ docint?.id }}</span></p>
+  <p><strong class="atributo">Tipo:</strong><span> {{ docint?.tipodocint?.nombre }}</span></p>
+  <p><strong class="atributo">Categoria:</strong><span> {{ docint?.categoria }}</span></p>
+  <p><strong class="atributo">Fecha Inicio:</strong><span> {{ docint?.fechaini }}</span></p>
+  <p><strong class="atributo">Fecha Fin:</strong><span> {{ docint?.fechafin }}</span></p>
+  <p><strong class="atributo">Respresentante:</strong><span> {{ docint?.representante}}</span></p>
+  <p><strong class="atributo">Institucion:</strong><span> {{ docint?.institucion }}</span></p>
+  <p><strong class="atributo">Distrito:</strong><span> {{ docint?.distrito }}</span></p>
+  <p><strong class="atributo">Estado:</strong><span> {{ docint?.estado }}</span></p>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-raised-button mat-dialog-close>Cancel</button>
+  <!-- <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Install</button> -->
+</mat-dialog-actions>

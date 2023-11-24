@@ -17,7 +17,11 @@ const routes: Routes = [
       },
       {
         path: 'proyecto',
-        loadChildren: () => import('../proyecto/proyecto.module').then(m => m.ProyectoModule),
+        loadChildren: () => import('../portal-coordinador/portal-coordinador.module').then(m => m.PortalCoordinadorModule),
+      },
+      {
+        path: 'docint',
+        loadChildren: () => import('../portal-coordinador/portal-coordinador.module').then(m => m.PortalCoordinadorModule),
       },
       {
         path:'**',

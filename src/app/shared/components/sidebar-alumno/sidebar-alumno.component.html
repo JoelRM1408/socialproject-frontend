@@ -1,0 +1,25 @@
+<nav class="menu__side">
+  <div class="name__page">
+    <img src="assets/img/upeu.jpg" width="60px" [routerLink]="['/home/sidebar/welcome']" >
+  </div>
+  <ul class="options__menu">
+    <li>
+     <a class="option" [routerLink]="['/home/sidebar-alumno/equipo/equipos']">
+        <mat-icon class="arreglo" title="equipo" svgIcon="equipo"></mat-icon>
+        <h4 class="arregloa"><strong>Equipo</strong></h4>
+     </a>
+    </li>
+    <li>
+      <a class="option"  [routerLink]="['/home/convenio']" >
+        <mat-icon class="arreglo" title="informe" svgIcon="informe"></mat-icon>
+        <h4 class="arregloa"><strong>Informe</strong></h4>
+      </a>
+    </li>
+    <li>
+      <a class="option" [routerLink]="['/modules']">
+        <mat-icon class="arreglo" title="regresardashboard" svgIcon="regresardashboard"></mat-icon>
+        <h4 class="arregloa"><strong>Salir</strong></h4>
+      </a>
+     </li>
+  </ul>
+</nav>

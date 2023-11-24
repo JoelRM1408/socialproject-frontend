@@ -1,0 +1,110 @@
+.form-di{
+  width: 100%;
+  padding: 20px;
+}
+.form-di2{
+  background-color: white;
+  width: 100%;
+  height: 435px;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  padding-top: 20px;
+  box-shadow: 1px 1px 10px 10px rgba(0, 0, 0, 0.05);
+}
+
+.colum{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+}
+.formulario{
+  width: 80%;
+  height: 18%;
+}
+.formulariocate{
+  width: 80%;
+  height: 18%;
+
+}
+.formulariomini{
+  padding-left: 5px;
+  height: 90%;
+}
+.minicontenedor{
+  display: flex;
+  width: 81% ;
+  justify-content:space-between;
+}
+.file-upload {
+  display: inline-block;
+  margin: 16px;
+}
+
+.file-label {
+  background-color: #42A5F5; /* Azul primario de Angular Material */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.file-label:hover {
+  background-color: #003865;/* Azul más oscuro al pasar el mouse */
+}
+
+.icon {
+  margin-right: 8px;
+  font-size: 24px; /* Tamaño del ícono */
+}
+
+/* Estilizar el campo de entrada de archivos (ocultar el botón nativo) */
+input[type="file"] {
+  display: none;
+}
+
+#btguardar{
+  background: #003865;
+  color:white;
+  width: 25%;
+}
+
+#btregresar{
+  background:rgba(0, 56, 101, 0.15);
+  border: 1px solid #003865;
+  color: #003865;
+  border-radius: 6px;
+  text-transform: uppercase;
+  height: 90%;
+}
+#contenedoregresar{
+  height: 6%;
+}
+
+.contenedorguardar{
+ width: 100%;
+ display: flex;
+ justify-content: flex-end;
+ padding-top: 135px;
+ padding-right: 50px;
+}
+.contenedorguardar2{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 210px;
+  padding-right: 50px;
+ }
+
+.header-form{
+  margin-top: 20px;
+  padding-left: 5px;
+  text-transform: uppercase;
+  color: #003366;
+  font-weight: bolder;
+}

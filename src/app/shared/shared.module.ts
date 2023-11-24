@@ -5,6 +5,10 @@ import { HeaderComponent } from './components/header/header.component';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ImgBrokenDirective } from './directives/img-broken.directive';
+import { MatIconModule } from '@angular/material/icon';
+import { IconModule } from './icons/icons.module';
+import { SidebarAlumnoComponent } from './components/sidebar-alumno/sidebar-alumno.component';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 
 
@@ -12,16 +16,21 @@ import { ImgBrokenDirective } from './directives/img-broken.directive';
   declarations: [
     SidebarComponent,
     HeaderComponent,
-    ImgBrokenDirective
+    ImgBrokenDirective,
+    SidebarAlumnoComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    IconModule,
+    MatIconModule,
+    MatExpansionModule
   ],
     exports:[
     SidebarComponent,
-    HeaderComponent
+    HeaderComponent,
+    SidebarAlumnoComponent
   ]
 })
 export class SharedModule { }

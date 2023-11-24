@@ -1,0 +1,178 @@
+<div id="contenedoregresar">
+  <button id="btregresar" mat-fab extended color="primary" [routerLink]="['/home/sidebar/docint/listadocint']">
+    <mat-icon title="" svgIcon="regresar"></mat-icon>
+    Regresar
+  </button>
+</div>
+<h2 class="header-form">NUEVO DOCUMENTO DE INTERVENCION</h2>
+<mat-tab-group class="tabs">
+    <mat-tab class="tabs" label="Registrar Convenio" class="tabs">
+      <div class="form-di">
+        <form class="form-di2" [formGroup]="docintForm" (ngSubmit)="guardar()" >
+          <div class="colum">
+            <mat-form-field class="formulario">
+              <mat-label>Nombre del Convenio</mat-label>
+              <input type="text" formControlName="nombre" matInput placeholder="Ingresar nombre">
+            </mat-form-field>
+            <mat-form-field class="formulario">
+              <mat-label>Nombre de Institucion</mat-label>
+              <input type="text" formControlName="institucion" matInput placeholder="Ingresar nombre">
+            </mat-form-field>
+            <mat-form-field class="formulario">
+              <mat-label>Nombre de distrito</mat-label>
+              <input type="text" formControlName="distrito" matInput placeholder="Ingresar nombre">
+            </mat-form-field>
+            <mat-form-field class="formulario">
+              <mat-label>Nombre de representante</mat-label>
+              <input type="text" formControlName="representante" matInput placeholder="Ingresar nombre">
+            </mat-form-field>
+
+            <div class="file-upload">
+              <label for="file-input" class="file-label">
+                <mat-icon class="icon">cloud_upload</mat-icon> Subir archivo
+              </label>
+              <input type="file" id="file-input" (change)="onFileSelected($event)" accept=".pdf, .doc, .docx">
+            </div>
+
+          </div>
+          <div class="colum">
+            <mat-form-field class="formulariocate">
+              <mat-label>Tipos DocInt</mat-label>
+              <mat-select name="tipodocint" id="tipodocint" formControlName="tipodocint">
+                <mat-option [value]="item" *ngFor="let item of tiposdocint">{{item.nombre}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="formulariocate">
+              <mat-label>Categoria</mat-label>
+              <input type="text" formControlName="categoria" matInput placeholder="Ingresar categoria">
+            </mat-form-field>
+
+            <div class="minicontenedor">
+              <mat-form-field class="formulariomini">
+                <mat-label>Fecha inicio</mat-label>
+                <input type="date" formControlName="fechaini" matInput placeholder="Ingresar nombre">
+              </mat-form-field>
+              <mat-form-field class="formulariomini">
+                <mat-label>Fecha fin</mat-label>
+                <input type="date"formControlName="fechafin" matInput placeholder="Ingresar nombre">
+              </mat-form-field>
+            </div>
+            <!-- <mat-form-field class="formulariocate">
+              <mat-label>Estado</mat-label>
+              <input type="text" formControlName="estado" matInput [readonly]="true">
+            </mat-form-field> -->
+            <div class="contenedorguardar">
+              <button id="btguardar" type="submit" mat-raised-button>Guardar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </mat-tab>
+    <mat-tab class="tabs" label="Registrar Carta de Intencion">
+      <div class="form-di">
+        <div class="form-di2" [formGroup]="docintForm" (ngSubmit)="guardar()">
+          <div class="colum">
+            <mat-form-field class="formulario">
+              <mat-label>Nombre de la Carta de Intencion</mat-label>
+              <input type="text" formControlName="nombre" matInput placeholder="Ingresar nombre">
+            </mat-form-field>
+            <mat-form-field class="formulario">
+              <mat-label>Nombre de Institucion</mat-label>
+              <input type="text" formControlName="institucion" matInput placeholder="Ingresar nombre">
+            </mat-form-field>
+            <mat-form-field class="formulario">
+              <mat-label>Nombre de distrito</mat-label>
+              <input type="text" formControlName="distrito" matInput placeholder="Ingresar nombre">
+            </mat-form-field>
+            <mat-form-field class="formulario">
+              <mat-label>Nombre de representante</mat-label>
+              <input type="text" formControlName="representante" matInput placeholder="Ingresar nombre">
+            </mat-form-field>
+
+            <div class="file-upload">
+              <label for="file-input" class="file-label">
+                <mat-icon class="icon">cloud_upload</mat-icon> Subir archivo
+              </label>
+              <input type="file" id="file-input" (change)="onFileSelected($event)" accept=".pdf, .doc, .docx">
+            </div>
+
+          </div>
+          <div class="colum">
+            <mat-form-field class="formulariocate">
+              <mat-label>Tipos DocInt</mat-label>
+              <mat-select name="tipodocint" id="tipodocint" formControlName="tipodocint">
+                <mat-option [value]="item" *ngFor="let item of tiposdocint">{{item.nombre}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <div class="minicontenedor">
+
+              <mat-form-field class="formulariomini">
+                <mat-label>Fecha inicio</mat-label>
+                <input type="date" formControlName="fechaini" matInput placeholder="Ingresar nombre">
+              </mat-form-field>
+            </div>
+            <div class="contenedorguardar2">
+              <button id="btguardar" mat-button color="primary">Guardar</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </mat-tab>
+
+    <mat-tab class="tabs" label="Registrar Carta de Oficio">
+      <div class="form-di">
+        <div class="form-di2"[formGroup]="docintForm" (ngSubmit)="guardar()">
+          <div class="colum">
+            <mat-form-field class="formulario">
+              <mat-label>Nombre de la Carta de Oficio</mat-label>
+              <input type="text" formControlName="nombre" matInput placeholder="Ingresar nombre">
+            </mat-form-field>
+            <mat-form-field class="formulario">
+              <mat-label>Nombre de Institucion</mat-label>
+              <input type="text" formControlName="institucion" matInput placeholder="Ingresar nombre">
+            </mat-form-field>
+            <mat-form-field class="formulario">
+              <mat-label>Nombre de distrito</mat-label>
+              <input type="text" formControlName="distrito" matInput placeholder="Ingresar nombre">
+            </mat-form-field>
+            <mat-form-field class="formulario">
+              <mat-label>Nombre de representante</mat-label>
+              <input type="text" formControlName="representante" matInput placeholder="Ingresar nombre">
+            </mat-form-field>
+
+            <div class="file-upload">
+              <label for="file-input" class="file-label">
+                <mat-icon class="icon">cloud_upload</mat-icon> Subir archivo
+              </label>
+              <input type="file" id="file-input" (change)="onFileSelected($event)" accept=".pdf, .doc, .docx">
+            </div>
+
+          </div>
+          <div class="colum">
+            <mat-form-field class="formulariocate">
+              <mat-label>Tipos DocInt</mat-label>
+              <mat-select name="tipodocint" id="tipodocint" formControlName="tipodocint">
+                <mat-option [value]="item" *ngFor="let item of tiposdocint">{{item.nombre}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <div class="minicontenedor">
+              <mat-form-field class="formulariomini">
+                <mat-label>Fecha inicio</mat-label>
+                <input type="date" formControlName="fechaini" matInput placeholder="Ingresar nombre">
+              </mat-form-field>
+
+            </div>
+            <div class="contenedorguardar2">
+              <button id="btguardar" mat-button color="primary">Guardar</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </mat-tab>
+</mat-tab-group>

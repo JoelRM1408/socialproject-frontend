@@ -15,6 +15,10 @@ const routes: Routes = [
     loadChildren: () => import('./modules/modules-sidebar/home-sidebar/home-sidebar.module').then(m => m.HomeSidebarModule),
   },
   {
+    path:'home/sidebar-alumno',
+    loadChildren: () => import('./modules/modules-sidebar/home-sidebar-alumno/home-sidebar-alumno.module').then(m => m.HomeSidebarAlumnoModule),
+  },
+  {
     path:'home/coordinador',
     loadChildren: () => import('./modules/modules-sidebar/portal-coordinador/portal-coordinador.module').then(m => m.PortalCoordinadorModule),
   },

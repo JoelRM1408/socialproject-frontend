@@ -1,0 +1,59 @@
+<h2 mat-dialog-title>Editar Documento de Intervención</h2>
+<mat-dialog-content>
+
+  <form class="example-form" [formGroup]="editForm">
+    <div>
+      <mat-form-field class="formulario">
+        <mat-label>Nombre del Convenio</mat-label>
+        <input type="text" formControlName="nombre" matInput placeholder="Ingresar nombre">
+      </mat-form-field>
+
+      <mat-form-field class="formulario">
+        <mat-label>Tipos DocInt</mat-label>
+        <mat-select name="tipodocint" id="tipodocint" formControlName="tipodocint">
+          <mat-option [value]="item" *ngFor="let item of tiposdocint">{{item.nombre}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="formulario">
+        <mat-label>Categoria</mat-label>
+        <input type="text" formControlName="categoria" matInput placeholder="Ingresar categoria">
+      </mat-form-field>
+    </div>
+
+    <div class="colum">
+      <mat-form-field class="formulario">
+        <mat-label>Nombre de Institucion</mat-label>
+        <input type="text" formControlName="institucion" matInput placeholder="Ingresar nombre">
+      </mat-form-field>
+
+      <mat-form-field class="formulario">
+        <mat-label>Nombre de distrito</mat-label>
+        <input type="text" formControlName="distrito" matInput placeholder="Ingresar nombre">
+      </mat-form-field>
+
+      <mat-form-field class="formulario">
+        <mat-label>Nombre de representante</mat-label>
+        <input type="text" formControlName="representante" matInput placeholder="Ingresar nombre">
+      </mat-form-field>
+
+    </div>
+    <div class="minicontenedor">
+      <mat-form-field class="formulario">
+        <mat-label>Fecha inicio</mat-label>
+        <input type="date" formControlName="fechaini" matInput placeholder="Ingresar nombre">
+      </mat-form-field>
+
+      <mat-form-field class="formulario">
+        <mat-label>Fecha fin</mat-label>
+        <input type="date" formControlName="fechafin" matInput placeholder="Ingresar nombre">
+      </mat-form-field>
+
+    </div>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-raised-button id="btcerrar" (click)="cerrar()">Cancelar</button>
+  <button mat-raised-button id="btguardar" (click)="guardarcambios()">Guardar Cambios</button>
+</mat-dialog-actions>

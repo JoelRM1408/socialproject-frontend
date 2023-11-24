@@ -1,49 +1,55 @@
- <nav class="menu__side">
-   <div class="name__page">
-     <i class="fab fa-youtube" [routerLink]="['/home/sidebar/welcome']"></i>
-     <h4>SPPU</h4>
-   </div>
-   <ul class="options__menu">
-     <li>
-      <a [routerLink]="['/home/sidebar/proyecto']" class="option">
-         <i class="fas fa-home" title="Inicio"></i>
-         <h4>Proyectos</h4>
-       </a>
-     </li>
+<nav class="menu__side">
+  <div class="name__page">
+    <img src="assets/img/upeu.jpg" width="60px" [routerLink]="['/home/sidebar/welcome']" >
+  </div>
+  <ul class="options__menu">
+    <li>
+     <a class="option" [routerLink]="['/home/sidebar/docint/listadocint']">
+        <mat-icon title="docint" svgIcon="docint"></mat-icon>
+        <h4><strong>Documento Intervencion</strong></h4>
+     </a>
+    </li>
+    <li>
+      <mat-expansion-panel id="despegable">
+        <mat-expansion-panel-header>
+          <mat-icon class="" title="proyecto" svgIcon="proyecto"></mat-icon>
+          <h4 class="opproyecto"><strong>Proyecto</strong></h4>
+        </mat-expansion-panel-header>
+        <ul>
+          <li class="op">
+            <a class="option" [routerLink]="['/home/sidebar/proyecto/py/listapy']">
+              <h4><strong>Perfil</strong></h4>
+            </a>
+          </li>
+          <li class="op">
+            <a class="option" href="#">
+              <h4><strong>Validación</strong></h4>
+            </a>
+          </li>
+          <!-- Agrega más subopciones si es necesario -->
+        </ul>
+      </mat-expansion-panel>
+    </li>
 
-     <li>
-       <a class="option" [routerLink]="['/home/sidebar/convenio']" >
-         <i class="far fa-file" title="Portafolio"></i>
-         <h4>Convenio</h4>
-       </a>
-     </li>
+    <li>
+      <a class="option"  href="#">
+        <mat-icon class="arreglo" title="informe" svgIcon="informe"></mat-icon>
+        <h4 class="arregloa"><strong>Informe</strong></h4>
+      </a>
+    </li>
 
-     <li>
-       <a class="option" href="#">
-         <i class="fas fa-video" title="Cursos"></i>
-         <h4>Cursos</h4>
-       </a>
-     </li>
+    <li>
+     <a class="option"  href="#">
+       <mat-icon class="arreglo" title="actividad" svgIcon="actividad"></mat-icon>
+       <h4 class="arregloa"><strong>Actividad</strong></h4>
+     </a>
+    </li>
 
-     <li>
-       <a class="option" href="#">
-         <i class="far fa-sticky-note" title="Blog"></i>
-         <h4>Blog</h4>
-       </a>
+    <li>
+      <a class="option" [routerLink]="['/modules']">
+        <mat-icon class="arreglo" title="regresardashboard" svgIcon="regresardashboard"></mat-icon>
+        <h4 class="arregloa"><strong>Salir</strong></h4>
+      </a>
      </li>
-
-     <li>
-       <a class="option" href="#">
-         <i class="far fa-id-badge" title="Contacto"></i>
-         <h4>Contacto</h4>
-       </a>
-     </li>
-
-     <li href="#">
-       <a class="option" href="#">
-         <i class="far fa-address-card" title="Nosotros"></i>
-         <h4>Nosotros</h4>
-       </a>
-     </li>
-   </ul>
- </nav>
+  </ul>
+</nav>

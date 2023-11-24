@@ -1,49 +1,59 @@
 <div id="home">
+  <div id="contenedorprincipal">
     <div class="contenido_opciones">
-        <div class="margen">
-            <a class="opcion" [routerLink]="['/home/seguridad']">
-                <p class="texto">Seguridad</p>
-            </a>
-        </div>  
+      <div class="margen">
+        <a class="opcion" [routerLink]="['/home/sidebar-alumno/welcome']">
+          <mat-icon title="" class="imgopc" svgIcon="portalestudiante"></mat-icon>
+          <p class="texto">PORTAL DEL ESTUDIANTE</p>
+        </a>
+      </div>
     </div>
     <div class="contenido_opciones">
-        <div class="margen">
-            <a class="opcion" [routerLink]="['/home/configuracion']">
-                <p class="texto">Configuración de parámetros </p>
-            </a>
-        </div>  
+      <div class="margen">
+        <a class="opcion" [routerLink]="['/home/sidebar/welcome']">
+          <mat-icon title="" class="imgopc" svgIcon="portalcoord"></mat-icon>
+          <p class="texto">PORTAL DEL COORDINADOR</p>
+        </a>
+      </div>
     </div>
     <div class="contenido_opciones">
-        <div class="margen">
-            <a class="opcion" [routerLink]="['/home/coordinador']">
-                <p class="texto">Portal del coordinador</p>
-            </a>
-        </div>  
+      <div class="margen">
+        <a class="opcion" [routerLink]="['/home/reportes']">
+          <mat-icon title="" class="imgopcre" svgIcon="reportes"></mat-icon>
+          <p class="textore">REPORTES</p>
+        </a>
+      </div>
     </div>
     <div class="contenido_opciones">
-        <div class="margen">
-            <a class="opcion" [routerLink]="['/home/alumno']">
-                <p class="texto">Portal del estudiante</p>
-            </a>
-        </div>  
+      <div class="margen">
+        <a class="opcion" [routerLink]="['/home/seguridad']">
+          <mat-icon title="" class="imgopc" svgIcon="seguridad"></mat-icon>
+          <p class="texto">SEGURIDAD</p>
+        </a>
+      </div>
     </div>
 
     <div class="contenido_opciones">
-        <div class="margen">
-            <a class="opcion" [routerLink]="['/home/reportes']">
-                <p class="texto">Reporte</p>
-            </a>
-        </div>  
+      <div class="margen">
+        <a class="opcion" [routerLink]="['/home/configuracion']">
+          <mat-icon title="" class="imgopc" svgIcon="confi"></mat-icon>
+          <p class="texto">CONFIGURACIÓN</p>
+        </a>
+      </div>
     </div>
 
-    <div class="barra">
-        <img src="/assets/logo_upeu.png" class="upeu_derecha">
-        <!-- <img src="/assets/pictures/persona.png" class="persona"> -->
-        <!-- <p class="nombre_sede"><b>Nombre Completo</b></p> -->
-        <!-- <p class="sede">SEDE</p> -->
-        <!-- <p class="nombre_sede"><b>UPeU - Lima</b></p> -->
-        <div class="cerrar_sesion">
-            <p class="sesion"><a [routerLink]="['/login']" class="sesion">Cerrar Sesión </a> </p>
-        </div>
+  </div>
+  <div class="barra">
+    <div id="barra_1">
+      <img src="/assets/img/logo_upeu.png" id="upeu_derecha">
+      <img src="/assets/img/upeu1.png" id="upeu1" alt="">
     </div>
+    <p class="nombre_sede"><b>Nombre</b></p>
+    <!-- <p class="sede">SEDE</p>
+    <p class="nombre_sede"><b>UPeU - Lima</b></p> -->
+    <div id="contenedorbt">
+
+      <button mat-button [routerLink]="['/login']" id="btcerrar" color="primary">Cerrar Sesión</button>
+    </div>
+  </div>
 </div>

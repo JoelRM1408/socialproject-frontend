@@ -1,0 +1,20 @@
+mat-dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#btguardar{
+  color: white;
+  background: #003366;;
+}
+
+.formulario{
+  width: 30%;
+  margin-left: 20px;
+  margin-bottom: 5px;
+}
+
+.minicontenedor{
+  display: flex;
+  justify-content: center;
+}

@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
 
+
+
 .container-login {
-    margin: 0px;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -10,20 +11,36 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url('https://www.icacit.org.pe/web/images/UPeU_Lima.jpg');
+    background-image: url('/assets/img/fondoupeu.jpeg');
+    background-blend-mode: multiply;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 /* Para que pongan su logo*/
 .logo {
-    background-image: url('/assets/logo_upeu.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 200px;
-    height: 200px;
-    margin-bottom: 45px;
+    margin-top: 20px;
+    width: 60%;
+    height: 40%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#fondoupeu{
+  width: 70%;
+}
+.capa-de-sombra {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .container {
-    border-radius: 50px;
+    border-radius: 25px;
     background: rgba(255, 255, 255, 0.50);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
     display: flex;
@@ -32,76 +49,56 @@
     justify-content: center;
     /* Para centrar verticalmente */
     align-items: center;
-    width: 485px;
-    height: 538px;
+    width: 30%;
+    height: 75%;
 }
 
-.container a {
+.form-container a {
     color: white;
     font-size: 13px;
+    display: flex;
+    justify-content: center;
     text-decoration: none;
-    margin: 15px 0 10px;
+    margin: 15px 0 15px;
 }
 
-.container button {
-    font-family: 'Comic Neue', cursive;
-    background: rgba(255, 255, 255, 0.50);
+#btiniciar {
+    background: #FFD600;;
     color: #fff;
-    font-size: 12px;
-    padding: 10px 45px;
+    font-size: 14px;
     border: 1px solid transparent;
     border-radius: 8px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
     text-transform: uppercase;
-    margin-top: 40px;
-    margin-bottom: 15px;
+    margin-top: 7px;
+    margin-bottom: 5px;
     cursor: pointer;
 }
 
-
-.container form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 100%;
+.form-container  {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 60%;
+}
+#userpass{
+  width: 100%;
+  height: 28%;
 }
 
 
-.estilo_caja {
-    color: black;
-    border: 1px solid #000;
-    border-radius: 1vw;
-    background-color: rgba(255, 255, 255, 0);
-    padding: 5px 2vw;
-    font-family: 'Comic Neue', cursive;
-    font-size: 18px;
-    text-align: left;
-}
-.estilo_caja2 {
-color: black;
-border: 1px solid #000;
-border-radius: 1vw;
-background-color: rgba(255, 255, 255, 0);
-padding: 5px 2vw;
-font-family: 'Comic Neue', cursive;
-font-size: 18px;
-text-align: left;
 
+#form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.container button {
-    color: #FFF;
-    text-align: center;
-    font-size: 1vw;
-    font-family: 'Merriweather', serif;
-    border-radius: 1rem;
-    background: #FFD600;
-}
+
 .titulo2{
-color: #444344;
-font-size: 1vw;
-position: relative;
-left: 3vw;
+  margin-top: 0px;
+  color: #444344;
+  font-size: 1vw;
+  margin-bottom: 10px;
 }

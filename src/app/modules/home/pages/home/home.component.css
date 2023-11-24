@@ -3,117 +3,82 @@
   padding: 0;
 }
 
+#contenedorprincipal {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  padding-top: 20px;
+}
+
 #home {
   width: 100%;
   height: 100vh;
-  background-image: url("/assets/img-login.jpeg");
+  background-image: url("/assets/img/fondoupeu.jpeg");
   background-size: cover;
   background-position: center;
   display: flex;
+  flex-direction: row;
 }
 
 
 .margen {
   animation: go-back 1s;
-  margin-top: 30px;
-  margin-left: 45px;
-  width: 220px;
+  width: 70%;
   height: 220px;
   border-radius: 60px;
   background-color: #0009;
   display: flex;
   flex-wrap: wrap;
-
+  text-align: center;
+  justify-content: center;
 
 }
 
-.portal-coordinador {
-  margin-top: 25px;
-  margin-left: 70px;
-  width: 105px;
-  height: 105px;
-}
-.proyecto {
-  margin-top: 25px;
-  margin-left: 62px;
-  width: 105px;
-  height: 105px;
-}
-
-.aprobado {
-  margin-top: 25px;
-  margin-left: 70px;
-  width: 105px;
-  height: 105px;
-}
-
-.gestion_actividad {
-  margin-top: 25px;
-  margin-left: 62px;
-  width: 105px;
-  height: 105px;
-}
-
-.grupo {
-  margin-top: 25px;
-  margin-left: 60px;
-  width: 105px;
-  height: 105px;
-}
-
-.gestion_evidencia {
-  margin-top: 25px;
-  margin-left: 70px;
-  width: 105px;
-  height: 105px;
-}
-
-.gestion_informe {
-  margin-top: 25px;
-  margin-left: 62px;
-  width: 105px;
-  height: 105px;
-}
-
-.gestion_asistencia {
-  margin-top: 25px;
-  margin-left: 62px;
-  width: 105px;
-  height: 105px;
-}
 
 .texto {
-  margin-top: 5px;
-  margin-left: 48px;
-  width: 130px;
+  width: 60%;
   height: 60px;
   color: #FFF;
-  font-family: Open Sans;
   font-size: 18px;
   font-style: normal;
   font-weight: 800;
   line-height: normal;
   text-align: center;
+  justify-content: center;
+  margin: 0;
+  margin-right: 0;
 
 }
 
 .barra {
   height: auto;
   animation: go_barra 1s;
-  margin-left: 40px;
   text-align: center;
-  width: 392px;
-  height: 100%-6px;
+  width: 35%;
+  height: 100%;
   /* border: 6px solid #cb9624; */
   background: #000718;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.upeu_derecha {
-  animation: go_barra 1s;
-  margin-top: 50px;
-  width: 274px;
-  height: 187px;
-
+#upeu_derecha {
+  width: 18%;
+  height: 100%;
+}
+#upeu1 {
+  margin-left: 10px;
+  width: 40%;
+  height: 80%;
+}
+#barra_1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 10%;
 }
 
 #fondo_login {
@@ -136,10 +101,13 @@
 }
 
 .contenido_opciones {
-  width: 100%;
-  height: 480px;
+
+  width: 30%;
+  height: 35%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
 }
 
 .persona {
@@ -153,11 +121,12 @@
   animation: go_barra 1s;
   margin-top: 15px;
   margin-left: 15px;
+  margin-right: 15px;
   color: #FFF;
-  font-family: Open Sans;
   font-size: 20px;
 
 }
+
 
 .sede {
   animation: go_barra 1s;
@@ -171,6 +140,13 @@
   line-height: normal;
 }
 
+#btcerrar{
+  background: #F7A800;
+  border-radius: 25px;
+  color: white;
+  width: 40% ;
+}
+
 .cerrar_sesion {
   animation: go_barra 1s;
   margin-top: 15px;
@@ -180,6 +156,37 @@
   border-radius: 50px;
   background: #F7A800;
   text-align: center;
+}
+#contenedorbt{
+  width: 100%;
+  height: 5%;
+  display: flex;
+  justify-content: center ;
+}
+.imgopc{
+  width: 60%;
+  height: 60%;
+  padding-bottom: 15px;
+}
+.imgopcre{
+  width:54%;
+  height: 54%;
+  padding-bottom: 15px;
+}
+.textore {
+  width: 60%;
+  height: 10%;
+  color: #FFF;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  text-align: center;
+  justify-content: center;
+  margin: 0;
+  margin-right: 0;
+  margin-bottom: 100px;
+
 }
 
 .sesion {
@@ -195,38 +202,44 @@
 
 }
 
-.opcion{
+.opcion {
   text-decoration: none;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 @keyframes go-back {
   0% {
-      transform: translateY(50px);
+    transform: translateY(50px);
   }
 
   70% {
-      transform: translateY(-20px);
+    transform: translateY(-20px);
   }
 
   100% {
-      transform: translateY(0px);
+    transform: translateY(0px);
   }
 
   from {
-      opacity: 0;
+    opacity: 0;
   }
 
   to {
-      opacity: 1;
+    opacity: 1;
   }
 }
 
 @keyframes go_barra {
   from {
-      opacity: 0;
+    opacity: 0;
   }
 
   to {
-      opacity: 1;
+    opacity: 1;
   }
 }

@@ -1,18 +1,36 @@
 <section class="container-login">
+  <div class="capa-de-sombra">
     <div class="container" id="container">
-    <div class="logo">
-    </div>
-    <div class="form-container sign-in">
-        <h4 class="titulo2">Por favor, identifiquese</h4>
-        <form [formGroup]="formLogin" (ngSubmit)="sendUser()">
-        <input class="estilo_caja" placeholder="Usuario" formControlName="user">
-        <input class="estilo_caja2" type="password" placeholder="Contraseña" formControlName="password">
-        <label class="color">
-            <button>Iniciar Sesión</button>
-        </label>
-        <a  href="#">¿Olvido Su Contraseña?</a>
+      <div class="logo">
+        <img src="/assets/img/logo_upeu.png" id="fondoupeu" alt="">
+      </div>
+      <div class="form-container">
+        <h4 class="titulo2"><b>Por favor, identifiquese</b></h4>
+        <form id="form" [formGroup]="formLogin" (ngSubmit)="sendUser()" >
+          <mat-form-field id="userpass">
+            <mat-label>Usuario</mat-label>
+            <input type="email" formControlName="user" matInput  placeholder="example@upeu.edu.pe">
+            <mat-error *ngIf="formLogin.get('user')?.hasError('required')">Debe ingresar un usuario</mat-error>
+            <mat-error *ngIf="formLogin.get('user')?.hasError('minlength')">El usuario debe tener al menos 5 caracteres</mat-error>
+            <mat-error *ngIf="formLogin.get('user')?.hasError('custom')">Usuario incorrecto</mat-error>
+
+            <!-- <mat-error *ngIf="formLogin.get('user').hasError('invalidUser')">El usuario no existe</mat-error> -->
+          </mat-form-field>
+
+          <mat-form-field id="userpass">
+            <mat-label>Contraseña</mat-label>
+            <input type="password" matInput placeholder="*********" formControlName="password" [type]="hide ? 'password' : 'text'">
+            <mat-error *ngIf="formLogin.get('password')?.hasError('required')">Debe ingresar una contraseña</mat-error>
+            <mat-error *ngIf="formLogin.get('password')?.hasError('customPassword')">Contraseña incorrecto</mat-error>
+            <button mat-icon-button matSuffix (click)="togglePasswordVisibility()" [attr.aria-label]="'Toggle password visibility'" type="button">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+          <button type="submit" id="btiniciar" mat-button color="primary"><b>Iniciar Sesión</b></button>
+          <a  href="#">¿Olvido Su Contraseña?</a>
         </form>
+      </div>
     </div>
-    </div>
+  </div>
 </section>
 
