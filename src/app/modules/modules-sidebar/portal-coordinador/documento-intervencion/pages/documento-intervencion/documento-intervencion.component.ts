@@ -119,42 +119,58 @@ export class DocumentoIntervencionComponent {
   editar(docint: Docint) {
     // const docintCopy: Docint = { ...docint };
 
-    const fechainiString = docint.fechaini;
-    const fechafinString = docint.fechafin;
+    if (docint.fechaini) {
+      const fechainiString = docint.fechaini;
 
-    const partesFechaini = fechainiString.split('/');
-    const partesFechafin = fechafinString.split('/');
-    const fechaJSini = new Date(+partesFechaini[2], +partesFechaini[1]- 1, +partesFechaini[0]);
-    const fechaJSfin = new Date(+partesFechafin[2], +partesFechafin[1]- 1, +partesFechafin[0]);
+      const partesFechaini = fechainiString.split('/');
 
-    const datePipe = new DatePipe('en-US');
+      // Verificar si partesFechaini tiene la longitud esperada antes de acceder a sus elementos
+      if (partesFechaini.length === 3) {
+          const fechaJSini = new Date(+partesFechaini[2], +partesFechaini[1] - 1, +partesFechaini[0]);
 
+          let fechaJSfin: Date | undefined = undefined;
 
-    const fechaFormateadaini = datePipe.transform(fechaJSini, 'yyyy-MM-dd');
+          if (docint.fechafin) {
+              const fechafinString = docint.fechafin;
+              const partesFechafin = fechafinString.split('/');
 
-    const fechaFormateadafin = datePipe.transform(fechaJSfin, 'yyyy-MM-dd');
+              // Verificar si partesFechafin tiene la longitud esperada antes de acceder a sus elementos
+              if (partesFechafin.length === 3) {
+                  fechaJSfin = new Date(+partesFechafin[2], +partesFechafin[1] - 1, +partesFechafin[0]);
+              } else {
+                  console.error('Error al dividir las partes de la fecha de fin.');
+              }
+          }
 
-    // console.log(docint.fechaini)
-    // console.log(docint.fechafin)
+          const datePipe = new DatePipe('en-US');
 
-    const docintConFechasFormateadas = {
-      ...docint,
-      fechaini: fechaFormateadaini,
-      fechafin: fechaFormateadafin,
-    };
+          const fechaFormateadaini = datePipe.transform(fechaJSini, 'yyyy-MM-dd');
+          const fechaFormateadafin = fechaJSfin ? datePipe.transform(fechaJSfin, 'yyyy-MM-dd') : undefined;
 
-    console.log('doc a editar:', docint);
-    const dialogRef = this.dialog.open(ModaleditarComponent, {
-      data: docintConFechasFormateadas,
-      width: '70%', // Ajusta el ancho según sea necesario
-    });
+          const docintConFechasFormateadas = {
+              ...docint,
+              fechaini: fechaFormateadaini,
+              fechafin: fechaFormateadafin,
+          };
 
-    dialogRef.afterClosed().subscribe(result => {
-      if (result) {
-        // Si result es true, significa que se guardaron cambios. Puedes refrescar los datos según tu lógica.
-        this.refreshData();
+          console.log('doc a editar:', docintConFechasFormateadas);
+          const dialogRef = this.dialog.open(ModaleditarComponent, {
+              data: docintConFechasFormateadas,
+              width: '70%', // Ajusta el ancho según sea necesario
+          });
+
+          dialogRef.afterClosed().subscribe(result => {
+              if (result) {
+                  // Si result es true, significa que se guardaron cambios. Puedes refrescar los datos según tu lógica.
+                  this.refreshData();
+              }
+          });
+      } else {
+          console.error('Error al dividir las partes de la fecha de inicio.');
       }
-    });
+  } else {
+      console.error('La fecha de inicio es null o undefined.');
+  }
   }
 
   private refreshData(): void {

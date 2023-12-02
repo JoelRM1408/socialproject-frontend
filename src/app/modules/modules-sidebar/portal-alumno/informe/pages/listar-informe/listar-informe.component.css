@@ -1,0 +1,122 @@
+.header-form{
+  padding-left: 0px;
+  text-transform: uppercase;
+  color: #003366;
+  font-weight: bolder;
+}
+.flex-container {
+  display: flex;
+}
+/* app.component.css */
+.custom-box {
+  width: 215px;
+  height: 250px;
+  background: white;
+  box-shadow: 1px 1px 10px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.custom-text {
+  color: #061A29;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  margin-left: 20px;
+  word-wrap: break-word;
+}
+.custom-binary {
+  margin-left: 20px;
+  width: 118px;
+  height: 13px;
+  color: black;
+  font-size: 10px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+.team-name {
+  margin-left: 20px;
+  width: 118px;
+  color: black;
+  font-size: 10px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+.custom-fech {
+  margin-top: 120px;
+  margin-left: 20px;
+  width: 118px;
+  height: 13px;
+  color: black;
+  font-size: 10px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+.custom-fac {
+  margin-left: 20px;
+  width: 118px;
+  height: 13px;
+  color: black;
+  font-size: 10px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+.custom-ep {
+  margin-left: 20px;
+  width: 118px;
+  height: 13px;
+  color: black;
+  font-size: 10px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+.icons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+.custom-button {
+  margin-left: 1200px;
+  background-color: #003865; /* Color específico para el botón */
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.custom-container {
+  display: flex;
+  align-items: center;
+}
+.custom-infor {
+  margin-left: 10px;
+}
+.buttonregis{
+  background:rgba(0, 56, 101, 0.15);
+  border: 1px solid #003865;
+  color: #003865;
+  border-radius: 5px;
+  margin-right: 0px;
+  padding-right: 10px;
+  width: 14%;
+  height: 35px;
+}
+#contenedor2{
+  width: 100%;
+  padding: 20px;
+  padding-right: 20px;
+  padding-top: 0px;
+  display: flex;
+  justify-content: flex-end;
+}

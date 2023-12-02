@@ -16,10 +16,12 @@ import { MatTableModule } from '@angular/material/table';
 
 
 import { PortalCoordinadorRoutingModule } from './portal-coordinador-routing.module';
+import { MatCard, MatCardModule } from '@angular/material/card';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+  ],
   imports: [
     CommonModule,
     PortalCoordinadorRoutingModule,
@@ -36,7 +38,8 @@ import { PortalCoordinadorRoutingModule } from './portal-coordinador-routing.mod
     MatTooltipModule,
     MatPaginatorModule,
     MatSortModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatCardModule
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })

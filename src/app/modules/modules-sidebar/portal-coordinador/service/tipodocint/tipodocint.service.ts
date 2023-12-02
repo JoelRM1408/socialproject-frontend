@@ -17,4 +17,6 @@ export class TipodocintService {
   public getalltiposdocint():Observable<Tipodocint[]>{
     return this.httpClient.get<Tipodocint[]>(`${this.URL}/listartipodocint`);
   }
+
+  
 }

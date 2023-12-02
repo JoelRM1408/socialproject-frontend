@@ -1,5 +1,5 @@
 <div id="contenedoregresar">
-  <button id="btregresar" mat-fab extended color="primary" [routerLink]="['/home/sidebar/docint/listadocint']">
+  <button id="btregresar" mat-fab extended color="primary" [routerLink]="['/home/sidebar/portal-coordinador/docint/listadocint']">
     <mat-icon title="" svgIcon="regresar"></mat-icon>
     Regresar
   </button>
@@ -72,7 +72,7 @@
     </mat-tab>
     <mat-tab class="tabs" label="Registrar Carta de Intencion">
       <div class="form-di">
-        <div class="form-di2" [formGroup]="docintForm" (ngSubmit)="guardar()">
+        <form class="form-di2" [formGroup]="docintForm" (ngSubmit)="guardar()">
           <div class="colum">
             <mat-form-field class="formulario">
               <mat-label>Nombre de la Carta de Intencion</mat-label>
@@ -115,17 +115,17 @@
               </mat-form-field>
             </div>
             <div class="contenedorguardar2">
-              <button id="btguardar" mat-button color="primary">Guardar</button>
+              <button id="btguardar" type="submit" mat-button color="primary">Guardar</button>
             </div>
 
           </div>
-        </div>
+        </form>
       </div>
     </mat-tab>
 
     <mat-tab class="tabs" label="Registrar Carta de Oficio">
       <div class="form-di">
-        <div class="form-di2"[formGroup]="docintForm" (ngSubmit)="guardar()">
+        <form class="form-di2"[formGroup]="docintForm" (ngSubmit)="guardar()">
           <div class="colum">
             <mat-form-field class="formulario">
               <mat-label>Nombre de la Carta de Oficio</mat-label>
@@ -168,11 +168,11 @@
 
             </div>
             <div class="contenedorguardar2">
-              <button id="btguardar" mat-button color="primary">Guardar</button>
+              <button id="btguardar" type="submit" mat-button color="primary">Guardar</button>
             </div>
 
           </div>
-        </div>
+        </form>
       </div>
     </mat-tab>
 </mat-tab-group>

@@ -1,0 +1,69 @@
+<h2 class="header-form">NUEVO INFORME</h2>
+<!-- informe.component.html -->
+
+<div class="informe-container">
+  <div class="colum">
+    <form class="nombrebuscar">
+      <label for="">Nombre del lider</label>
+      <input class="prueba" placeholder="Ingresar Nombre" type="text">
+    </form>
+
+
+    <div class="colum">
+      <form class="Beneficiarios">
+        <label for="">Beneficiarios:</label>
+        <input class="ben" placeholder="Cant." type="text">
+      </form>
+    </div>
+
+    <div class="colum">
+      <form class="Estudiantes">
+        <label for="">Estudiantes:</label>
+        <input class="est" placeholder="Cant." type="text">
+      </form>
+    </div>
+
+    <div class="colum">
+      <form class="Docentes">
+        <label for="">Docentes:</label>
+        <input class="doc" placeholder="Cant." type="text">
+      </form>
+    </div>
+  </div>
+  <div class="colum2">
+    <form class="form">
+      <label for="">Semestre</label>
+      <select class="" class="select">
+        <option value="" disabled selected>Seleccionar</option>
+        <option id="tipodi" [value]="item" *ngFor="let item of ">{{item}}
+        </option>
+      </select>
+    </form>
+
+    <form class="form">
+      <label for="">Proyecto</label>
+      <select class="" class="select">
+        <option value="" disabled selected>Seleccionar</option>
+        <option id="tipodi" [value]="item" *ngFor="let item of ">{{item}}
+        </option>
+      </select>
+    </form>
+
+    <form class="form">
+      <label for="">Actividad</label>
+      <select class="" class="select">
+        <option value="" disabled selected>Seleccionar</option>
+        <option id="tipodi" [value]="item" *ngFor="let item of ">{{item}}
+        </option>
+      </select>
+    </form>
+
+    <form class="form">
+      <label for="">Equipo</label>
+      <select class="" class="select">
+        <option value="" disabled selected>Seleccionar</option>
+        <option id="tipodi" [value]="item" *ngFor="let item of ">{{item}}
+        </option>
+      </select>
+    </form>
+  </div>

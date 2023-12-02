@@ -16,15 +16,7 @@ const routes: Routes = [
           loadChildren: () => import('../convenios/convenios.module').then(m => m.ConveniosModule)
         },
         {
-          path: 'proyecto',
-          loadChildren: () => import('../proyecto/proyecto.module').then(m => m.ProyectoModule),
-        },
-        {
-          path: 'docint',
-          loadChildren: () => import('../portal-coordinador/portal-coordinador.module').then(m => m.PortalCoordinadorModule),
-        },
-        {
-          path: 'equipo',
+          path: 'portal-alumno',
           loadChildren: () => import('../portal-alumno/portal-alumno.module').then(m => m.PortalAlumnoModule),
         },
         {

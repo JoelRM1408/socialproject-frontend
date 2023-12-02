@@ -3,14 +3,17 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path:'',
+    path:'docint',
     loadChildren: ()=>import('./documento-intervencion/documento-intervencion.module').then(m=>m.DocumentoIntervencionModule),
   },
   {
-    path:'py',
+    path:'proyecto',
     loadChildren: ()=>import('./proyecto/proyecto.module').then(m=>m.ProyectoModule),
   },
-
+  {
+    path:'validarinf',
+    loadChildren: ()=>import('./validar-informe/validar-informe.module').then(m=>m.ValidarInformeModule),
+  },
 ];
 
 @NgModule({

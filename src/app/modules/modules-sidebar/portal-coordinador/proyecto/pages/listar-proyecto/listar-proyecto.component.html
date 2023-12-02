@@ -18,7 +18,7 @@
         <label for="">Tipo</label>
         <select class="" class="select">
           <option value="" disabled selected>Seleccionar</option>
-          <option id="tipodi" [value]="item" *ngFor="let item of ">
+          <option id="tipodi" [value]="item" *ngFor="let item of tipospy"> {{item.nombre}}
           </option>
         </select>
       </form>
@@ -26,8 +26,8 @@
         <label for="">Semestre</label>
         <select name="asd" class="select">
           <option value="" disabled selected>Seleccionar</option>
-          <option value="1">asd</option>
-          <option value="1">asd</option>
+          <option [value]="item" *ngFor="let item of semestres"> {{item.nombre}}
+          </option>
         </select>
       </form>
 
@@ -36,7 +36,7 @@
 
 </form>
 <div id="contenedor2">
-  <button class="buttonregis" mat-fab extended color="primary" [routerLink]="['/home/sidebar/docint/agregardocint']">
+  <button class="buttonregis" mat-fab extended color="primary" [routerLink]="['/home/sidebar/portal-coordinador/proyecto/registrarpy']">
     <mat-icon id="iconagregar" svgIcon="agregar"></mat-icon>
     <span id="nuevodoc">Nuevo Proyecto</span>
   </button>
@@ -53,44 +53,35 @@
         <table mat-table #table matSort [dataSource]="dataSource" class="mat-elevation-z8">
 
           <ng-container matColumnDef="id">
-            <th mat-header-cell mat-sort-header *matHeaderCellDef> ID </th>
-            <td mat-cell *matCellDef="let item"> {{item.id}} </td>
+            <th mat-header-cell mat-sort-header *matHeaderCellDef>ID</th>
+            <td mat-cell *matCellDef="let item "> {{item.id}} </td>
           </ng-container>
 
-          <ng-container matColumnDef="nombredocint">
-            <th mat-header-cell mat-sort-header *matHeaderCellDef> Nombre </th>
+          <ng-container matColumnDef="nombrepy">
+            <th mat-header-cell mat-sort-header *matHeaderCellDef>Nombre de Proyecto</th>
             <td mat-cell *matCellDef="let item"> {{item.nombre}} </td>
           </ng-container>
 
           <ng-container matColumnDef="tipo">
-            <th mat-header-cell mat-sort-header *matHeaderCellDef> Tipo </th>
-            <td mat-cell *matCellDef="let item"> {{item.tipodocint.nombre}} </td>
+            <th mat-header-cell mat-sort-header *matHeaderCellDef>Tipo</th>
+            <td mat-cell *matCellDef="let item"> {{item.tipopro.nombre}} </td>
           </ng-container>
 
-          <ng-container matColumnDef="fechaini">
-            <th mat-header-cell mat-sort-header *matHeaderCellDef> Fecha Inicio </th>
-            <td mat-cell *matCellDef="let item"> {{item.fechaini}} </td>
+          <ng-container matColumnDef="semestre">
+            <th mat-header-cell mat-sort-header *matHeaderCellDef>Semestre</th>
+            <td mat-cell *matCellDef="let item"> {{item.semestre.nombre}} </td>
           </ng-container>
 
-          <ng-container matColumnDef="fechafin">
-            <th mat-header-cell mat-sort-header *matHeaderCellDef> Fecha Fin </th>
-            <td mat-cell *matCellDef="let item"> {{item.fechafin}} </td>
+          <ng-container matColumnDef="localidad">
+            <th mat-header-cell mat-sort-header *matHeaderCellDef>Localidad</th>
+            <td mat-cell *matCellDef="let item"> {{item.zintervencion}} </td>
           </ng-container>
 
           <ng-container matColumnDef="estado">
-            <th mat-header-cell mat-sort-header *matHeaderCellDef> Estado </th>
+            <th mat-header-cell mat-sort-header *matHeaderCellDef>Estado</th>
             <td mat-cell *matCellDef="let item"> {{item.estado}} </td>
           </ng-container>
 
-          <ng-container matColumnDef="doc">
-            <th mat-header-cell mat-sort-header *matHeaderCellDef> Doc </th>
-            <td mat-cell *matCellDef="let item">
-              <button mat-mini-fab color="basic" aria-label="Example icon button with a visibilityicon"
-              (click)="prueba">
-              <mat-icon>description</mat-icon>
-            </button>
-            </td>
-          </ng-container>
 
           <ng-container matColumnDef="acciones">
             <th mat-header-cell *matHeaderCellDef> Acciones </th>

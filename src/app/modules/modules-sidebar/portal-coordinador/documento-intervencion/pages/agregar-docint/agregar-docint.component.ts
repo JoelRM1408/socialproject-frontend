@@ -179,9 +179,16 @@ export class AgregarDocintComponent {
           console.log("vigente")
         } else {
           this.docintForm.get('estado')?.setValue('vencido');
-          console.log("vencido")
+          console.log("Documento vencido:");
+        console.log("Fecha de inicio:", fechaInicioFormateada);
+        console.log("Fecha de fin:", fechaFinFormateada);
+        console.log("Hoy:", hoyformateado);
+
         }
       }
+    }else {
+      this.docintForm.get('estado')?.setValue('vigente');
+      //console.log("vencido")
     }
   }
 

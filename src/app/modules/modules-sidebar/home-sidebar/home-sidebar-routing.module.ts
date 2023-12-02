@@ -16,12 +16,12 @@ const routes: Routes = [
         loadChildren: () => import('../convenios/convenios.module').then(m => m.ConveniosModule)
       },
       {
-        path: 'proyecto',
+        path: 'portal-coordinador',
         loadChildren: () => import('../portal-coordinador/portal-coordinador.module').then(m => m.PortalCoordinadorModule),
       },
       {
-        path: 'docint',
-        loadChildren: () => import('../portal-coordinador/portal-coordinador.module').then(m => m.PortalCoordinadorModule),
+        path: 'portal-alumno',
+        loadChildren: () => import('../portal-alumno/portal-alumno.module').then(m => m.PortalAlumnoModule),
       },
       {
         path:'**',

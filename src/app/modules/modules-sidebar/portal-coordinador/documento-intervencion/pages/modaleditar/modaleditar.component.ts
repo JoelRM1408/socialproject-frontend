@@ -1,5 +1,5 @@
 import { Component, Inject } from '@angular/core';
-import { MAT_DIALOG_DATA,MatDialogRef } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TipodocintService } from '../../../service/tipodocint/tipodocint.service';
 import { Tipodocint } from 'src/app/core/models/tipodocint';
@@ -12,13 +12,13 @@ import { DatePipe } from '@angular/common';
   styleUrls: ['./modaleditar.component.css']
 })
 export class ModaleditarComponent {
-  tiposdocint:Tipodocint[] =[];
+  tiposdocint: Tipodocint[] = [];
   editForm: FormGroup;
 
   constructor(
     private fb: FormBuilder,
     private dialogRef: MatDialogRef<ModaleditarComponent>,
-    public tipodocintService:TipodocintService,
+    public tipodocintService: TipodocintService,
     public docintService: DocintService,
     private datePipe: DatePipe,
 
@@ -32,16 +32,18 @@ export class ModaleditarComponent {
       institucion: [data.institucion, Validators.required],
       distrito: [data.distrito, Validators.required],
       categoria: [data.categoria, Validators.required],
-      fechaini:[data.fechaini, Validators.required],
-      fechafin:[data.fechafin, Validators.required],
-      estado:[data.estado],
-      urldoc:[data.urldoc, Validators.required],
-      tipodocint:[data.tipodocint, Validators.required],
+      fechaini: [data.fechaini, Validators.required],
+      fechafin: [data.fechafin, Validators.required],
+      estado: [data.estado],
+      urldoc: [data.urldoc, Validators.required],
+      tipodocint: [data.tipodocint, Validators.required],
     });
 
     this.tipodocintService.getalltiposdocint().subscribe(resp => {
       this.tiposdocint = resp;
 
+      const tipodiSeleccionado = this.tiposdocint.find((tipodi) => tipodi.id === data.tipodocint.id);
+      this.editForm.patchValue({ tipodocint: tipodiSeleccionado });
       //console.log(resp);
     },
       error => { console.error(error) }
@@ -52,8 +54,8 @@ export class ModaleditarComponent {
   guardarcambios(): void {
     // Guarda los cambios y cierra el modal
     const editedocint = { ...this.data, ...this.editForm.value };
-    editedocint.fechaini = this.datePipe.transform(editedocint.fechaini, 'dd/MM/yyyy')as string;
-    editedocint.fechafin = this.datePipe.transform(editedocint.fechafin, 'dd/MM/yyyy')as string;
+    editedocint.fechaini = this.datePipe.transform(editedocint.fechaini, 'dd/MM/yyyy') as string;
+    editedocint.fechafin = this.datePipe.transform(editedocint.fechafin, 'dd/MM/yyyy') as string;
     this.docintService.editardocint(this.data.id, editedocint).subscribe(
       () => {
         this.dialogRef.close(true); // Indica que la edición fue exitosa
@@ -78,19 +80,25 @@ export class ModaleditarComponent {
     const hoyformateado = this.datePipe.transform(hoy, 'dd/MM/yyyy');
     const fechaInicioFormateada = this.datePipe.transform(fechaInicio, 'dd/MM/yyyy');
     const fechaFinFormateada = this.datePipe.transform(fechaFin, 'dd/MM/yyyy');
-    // console.log(hoyformateado);
-    // console.log(fechaInicioFormateada);
-    // console.log(fechaFinFormateada);
+    console.log("hoy:",hoyformateado);
+     console.log("ini:",fechaInicioFormateada);
+     console.log("fin:",fechaFinFormateada);
 
     if (fechaInicio && fechaFin && hoyformateado) {
       if (fechaInicioFormateada && fechaFinFormateada && hoyformateado) {
         if (fechaInicioFormateada <= hoyformateado && fechaFinFormateada >= hoyformateado) {
           this.editForm.get('estado')?.setValue('vigente');
+          console.log("vigente")
         } else {
           this.editForm.get('estado')?.setValue('vencido');
+          console.log("vencido")
         }
       }
+    }else {
+      this.editForm.get('estado')?.setValue('vigente');
+      console.log("vigente")
     }
   }
-
 }
+
+

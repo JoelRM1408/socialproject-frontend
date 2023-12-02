@@ -30,4 +30,8 @@ export class DocintService {
   public getDocintById(id: number): Observable<Docint> {
     return this.httpClient.get<Docint>(`${this.URL}/buscardocint/${id}`);
   }
+
+  public getDocintByTipo(tipodi: number): Observable<Docint[]> {
+    return this.httpClient.get<Docint[]>(`${this.URL}/buscardocinttipo/${tipodi}`);
+  }
 }

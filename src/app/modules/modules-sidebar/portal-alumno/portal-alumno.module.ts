@@ -2,16 +2,17 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { PortalAlumnoRoutingModule } from './portal-alumno-routing.module';
-import { InformeComponent } from './informe/pages/informe.component';
+import { ListarInformeComponent } from './informe/pages/listar-informe/listar-informe.component';
+import { AgregarInformeComponent } from './informe/pages/agregar-informe/agregar-informe.component';
 
 
 @NgModule({
   declarations: [
-    InformeComponent
   ],
   imports: [
     CommonModule,
-    PortalAlumnoRoutingModule
+    PortalAlumnoRoutingModule,
+    
   ]
 })
 export class PortalAlumnoModule { }

@@ -1,1 +1,120 @@
-<p>registrar-proyecto works!</p>
+<div id="header">
+  <h2 class="header-form">NUEVO PROYECTO</h2>
+  <button id="btregresar" mat-fab extended color="primary" [routerLink]="['/home/sidebar/portal-coordinador/proyecto/listapy']">
+    <mat-icon title="" svgIcon="regresar"></mat-icon>
+    Regresar
+  </button>
+</div>
+
+<form id="formproyecto" [formGroup]="proyectoForm">
+  <div class="form1">
+    <div class="fila1">
+      <mat-form-field class="formulario">
+        <mat-label>Tipo de Proyecto</mat-label>
+        <mat-select name="tipopy" id="tipopy" formControlName="tipopro">
+          <!-- <mat-option value="" disabled selected>Seleccionar</mat-option> -->
+          <mat-option [value]="item" *ngFor="let item of tipospy">{{item.nombre}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="formulario1">
+        <mat-label>Nombre del Proyecto</mat-label>
+        <input type="text" formControlName="nombre" matInput placeholder="Ingresar nombre">
+      </mat-form-field>
+
+    </div>
+    <div class="fila1">
+      <mat-form-field class="formulario2">
+        <mat-label>Tipo de DocInt</mat-label>
+        <mat-select name="tipodi" id="tipodi" formControlName="tipodocint">
+          <mat-option [value]="item" *ngFor="let item of tiposdocint">{{item.nombre}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="formulario3">
+        <mat-label>DocInt</mat-label>
+        <mat-select name="docint" id="docint" formControlName="docint">
+          <mat-option [value]="item" *ngFor="let item of docsint">{{item.nombre}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="fila1">
+      <mat-form-field class="formulario4">
+        <mat-label>Facultad</mat-label>
+        <mat-select name="facultad" id="facultad" formControlName="facultad">
+          <mat-option [value]="item" *ngFor="let item of facultades">{{item.nombre}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="formulario5">
+        <mat-label>Ep</mat-label>
+        <mat-select name="ep" id="ep" formControlName="ep">
+          <mat-option [value]="item" *ngFor="let item of esp">{{item.nombre}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="formulario5">
+        <mat-label>Ciclo</mat-label>
+        <mat-select name="ciclo" id="ciclo" formControlName="ciclo">
+          <mat-option [value]="item" *ngFor="let item of ciclos">{{item.nombre}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="fila1">
+      <mat-form-field class="formulario4">
+        <mat-label>Fecha inicio</mat-label>
+        <input type="date" formControlName="fechaini" matInput placeholder="Ingresar nombre">
+      </mat-form-field>
+      <mat-form-field class="formulario5">
+        <mat-label>Fecha fin</mat-label>
+        <input type="date"formControlName="fechafin" matInput placeholder="Ingresar nombre">
+      </mat-form-field>
+      <mat-form-field class="formulario5">
+        <mat-label>Semestre</mat-label>
+        <mat-select name="semestre" id="semestre" formControlName="semestre">
+          <mat-option [value]="item" *ngFor="let item of semestres">{{item.nombre}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="fila1">
+      <mat-form-field class="formulario6">
+        <mat-label>Poblacion Beneficiaria</mat-label>
+        <input type="text" formControlName="pbeneficiaria" matInput placeholder="Ingresar poblacion">
+      </mat-form-field>
+      <mat-form-field class="formulario8">
+        <mat-label>Zona de Intervencion</mat-label>
+        <input type="text" formControlName="zintervencion" matInput placeholder="Ingresar zona">
+      </mat-form-field>
+    </div>
+    <div class="fila1">
+      <mat-form-field class="formulario9">
+        <mat-label>Responsable del Proyecto</mat-label>
+        <input type="text" formControlName="responsable" matInput placeholder="Ingresar nombre">
+      </mat-form-field>
+      <mat-form-field class="formulario5" floatLabel="always">
+        <mat-label>Presupuesto</mat-label>
+        <input matInput type="number" formControlName="presupuesto" class="example-right-align" placeholder="0">
+        <span matTextPrefix>S/.&nbsp;</span>
+        <span matTextSuffix>.00</span>
+      </mat-form-field>
+    </div>
+    <div class="fila2">
+      <mat-form-field class="formulario7">
+        <mat-label>Descripcion</mat-label>
+        <textarea type="text" matInput formControlName="descripcion"></textarea>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="form2">
+    <div class="fila2">
+      <mat-form-field class="formulario7">
+        <mat-label>Objetivos</mat-label>
+        <textarea type="text" matInput formControlName="objetivo"></textarea>
+      </mat-form-field>
+    </div>
+  </div>
+</form>
+
